@@ -2,6 +2,8 @@
 set -eo pipefail
 
 XDG_DATA_HOME="${XDG_DATA_HOME:-$HOME/.local/share}"
+XDG_RUNTIME_DIR="/run/user/$UID"
+DBUS_SESSION_BUS_ADDRESS="unix:path=${XDG_RUNTIME_DIR}/bus"
 
 echo ":: Figma Agent for Linux"
 echo ":: ====================="
